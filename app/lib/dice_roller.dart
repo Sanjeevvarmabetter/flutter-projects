@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 
+var randomizer = Random();
+
 class Diceroller extends StatefulWidget {
   const Diceroller({super.key});
   @override
@@ -16,9 +18,8 @@ class _Dicerollerstate extends State<Diceroller> {
 
   // var activeDiceImage = 'assets/images/Dice-2.png';
   rollDice() {
-
     setState(() {
-      currentdiceroll = Random().nextInt(6) + 1;
+      currentdiceroll = randomizer.nextInt(6) + 1;
       // activeDiceImage = 'assets/images/Dice-$diceroll.png';
     });
   }
